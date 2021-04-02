@@ -8,7 +8,7 @@ import time
 
 #TO REPLACE WITH YOUR OWN.
 USERNAME="YOUR USERNAME";
-PASSWORD="YOUR PASSWORD";
+PASSWORD="YOUR PATH";
 WEBDRIVER_PATH = "chromedriver.exe PATH";
 #END TO REPLACE.
 
@@ -55,15 +55,16 @@ def createRepostry(name, public, driver):
 
 def main():
     public = True
+    chrome_options = Options()
+    if ('-dhl' not in sys.argv):
+        chrome_options.add_argument("--headless")
+    driver = webdriver.Chrome(executable_path=WEBDRIVER_PATH, chrome_options=chrome_options);
     if (not checkArgs()):
         print(MESSAGES["usage"]);
         return;
     if (not REQUIREMENTS[1] in sys.argv):
         public = not public;
-    if ('-dhl' not in sys.argv):
-        chrome_options = Options()
-        chrome_options.add_argument("--headless")
-        driver = webdriver.Chrome(executable_path=WEBDRIVER_PATH, chrome_options=chrome_options);
+    
     login(driver);
     createRepostry(sys.argv[1], public, driver);
     print(MESSAGES['finished']);
