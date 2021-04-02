@@ -1,5 +1,5 @@
 # auto-repository
-No more time wasting on repositories creation, Using Selenium **auto-repository** creates your github repository automatically on headless mode and copies github repository link to your clipboard.
+No more time wasting on repositories creation, Using Selenium **auto-repository** creates your github repository automatically on headless mode and copies github repository **SSH** link to your clipboard.
 
 ## HOW TO USE
 1. Download/Extract zip.
