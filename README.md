@@ -1,5 +1,5 @@
 # auto-repostry
-No more time wasting on repostries creation, Using Selenium **auro-repostry** creates your repostry on headless mode.
+No more time wasting on repostries creation, Using Selenium **auto-repostry** creates your repostry on headless mode.
 
 ## HOW TO USE
 1. Download/Extract zip.
